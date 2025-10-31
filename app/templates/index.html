@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayLogger</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="shortcut icon" href="{{url_for('static', filename='img/logo.svg')}}" type="image/x-icon">
+</head>
+<body>
+  <div class="cards" id="c1">
+    <img src="{{url_for('static', filename='img/lista.svg')}}" alt="imagen de lista">
+    
+    <div>
+      <h1>Nuevo Pago</h1>
+      <p>Agregar estudiante a la lista de pagos realizados</p>
+      <button><a href="{{ url_for('main.agregar') }}">Agregar</a></button>
+    </div>
+  </div>
+
+  <div class="cards" id="c2">
+    <img src="{{url_for('static', filename='img/deuda.svg')}}" alt="imagen de lista">
+    
+    <div>
+      <h1>Deudas</h1>
+      <p>Mostrar a los estudiantes que hay que devolverles dinero</p>
+      <button><a href="{{ url_for('main.deudas') }}">Mostras</a></button>
+    </div>
+  </div>
+</body>
+</html>

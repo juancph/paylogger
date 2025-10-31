@@ -1,0 +1,40 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+venv/
+env/
+.venv/
+.env/
+
+# Archivos de configuración local
+*.env
+*.flaskenv
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs o temporales
+*.log
+*.bak
+*.tmp
+
+# Configuraciones del editor
+.vscode/
+.idea/
+
+# Caché de Python o Flask
+.cache/
+.mypy_cache/
+.pytest_cache/
+instance/
+
+# Archivos generados por Flask (si llegas a usar instancia)
+*.egg-info/
+
+#json
+app/data/*.json

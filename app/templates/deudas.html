@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayLogger - Deudas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/deudas.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.svg') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="{{ url_for('main.inicio') }}">Personas a las que debes cambio</a></h1>
+
+        {% if deudas %}
+            <ul class="deudas-lista">
+                {% for i in deudas %}
+                    <li class="deuda-item">
+                        <div class="deuda-info">
+                            <span class="nombre"><a href="{{ url_for('main.eliminar_deuda', nombre=i['nombre']) }}">{{ i.nombre }}</a></span>
+                            <span class="monto">Debe devolver <b>{{ i.cambio }}</b> pesos</span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="sin-deudas">No tienes deudas registradas</p>
+        {% endif %}
+    </div>
+</body>
+</html>
