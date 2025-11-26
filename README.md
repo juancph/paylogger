@@ -54,7 +54,7 @@ paylogger
 1. **Clonar el repositorio**
 ```bash
 git clone https://github.com/juancph/paylogger.git
-cd gestor-de-deudas
+cd paylogger
 ```
 
 2. **Crear y activar un entorno virtual**
